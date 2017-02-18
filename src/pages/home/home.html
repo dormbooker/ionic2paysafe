@@ -1,0 +1,29 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>PaySafe.JS</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	
+	<ion-item>
+		<ion-label>Select Payment Option</ion-label>
+		<ion-select [(ngModel)]="paymentOption" (ionChange)="initPaySafe()">
+			<ion-option value="PaySafe">PaySafe</ion-option>
+		</ion-select>
+	</ion-item>
+	
+	<ion-row [hidden]="paymentOption!='PaySafe'">
+		<ion-col>
+			<ion-label stacked>Card Number</ion-label>
+			<div id="paysafeCardNumber" class="paysafe-input-field"></div>
+			<ion-label stacked>Card Expiary</ion-label>
+			<div id="paysafeExpiryDate" class="paysafe-input-field"></div>
+			<ion-label stacked>CVV</ion-label>
+			<div id="paysafeCVV" class="paysafe-input-field"></div>
+		</ion-col>
+	</ion-row>
+	<button [hidden]="paymentOption!='PaySafe'" ion-button id="paysafePayNow" item-right icon-left full tappable>
+		<ion-icon name="send"></ion-icon>Pay
+	</button>
+</ion-content>
