@@ -4,10 +4,9 @@ import { NavController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
 declare var paysafe: any;
 @Component({
-	selector: 'page-home',
-	templateUrl: 'home.html'
+	templateUrl: 'home2.html'
 })
-export class HomePage {
+export class Home2Page {
 
 	public loader;
 	public paymentOption = null;
@@ -16,17 +15,17 @@ export class HomePage {
 		environment: "TEST",
 		fields: {
 			cardNumber: {
-				selector: "#paysafeCardNumber",
+				selector: "#paysafeCardNumber2",
 				placeholder: "Card number"
 
 			},
 			expiryDate: {
-				selector: "#paysafeExpiryDate",
+				selector: "#paysafeExpiryDate2",
 				placeholder: "Expiry date"
 
 			},
 			cvv: {
-				selector: "#paysafeCVV",
+				selector: "#paysafeCVV2",
 				placeholder: "CVV"
 
 			}
@@ -46,9 +45,10 @@ export class HomePage {
 		this.loader.present();
 	}
 	initPaySafe() {
-		document.getElementById("paysafeCardNumber").innerHTML="";
-		document.getElementById("paysafeExpiryDate").innerHTML="";
-		document.getElementById("paysafeCVV").innerHTML="";
+		document.getElementById("paysafeCardNumber2").innerHTML="";
+		document.getElementById("paysafeExpiryDate2").innerHTML="";
+		document.getElementById("paysafeCVV2").innerHTML="";
+
 		var thisObject=this;
 		this.showLoading();
 		paysafe.fields.setup(this.PafeSafeAPIKey, this.PaySafeOptions, function (instance, error) {
@@ -57,7 +57,7 @@ export class HomePage {
 			// When the customer clicks Pay Now,
 			// call the SDK tokenize function to create
 			// a single-use payment token corresponding to the card details entered
-			document.getElementById("paysafePayNow").addEventListener("click", function (event) {
+			document.getElementById("paysafePayNow2").addEventListener("click", function (event) {
 				console.log(instance.areAllFieldsValid());
 				instance.tokenize(function (instance, error, result) {
 					if (error) {

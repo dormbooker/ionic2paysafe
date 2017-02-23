@@ -12,8 +12,8 @@ import { ContactPage } from '../contact/contact';
 export class TabsPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  tab1Root: any = DemoPage;
-  tab2Root: any = AboutPage;
+  tab1Root: any = HomePage;
+  tab2Root: any = DemoPage;
   tab3Root: any = ContactPage;
 
   constructor() {

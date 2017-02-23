@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
-import { HomePage } from './home';
+import { Home2Page } from './home2';
 
 @Component({
 	templateUrl: 'demo.html'
@@ -14,6 +14,6 @@ export class DemoPage {
 	}
 	pushPage()
 	{
-		this.navCtrl.push(HomePage)
+		this.navCtrl.push(Home2Page)
 	}
 }

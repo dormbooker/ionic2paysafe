@@ -5,6 +5,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { DemoPage } from '../pages/home/demo';
+import { Home2Page } from '../pages/home/home2';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -13,7 +14,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     MyApp,
     AboutPage,
     ContactPage,
-    HomePage,DemoPage,
+    HomePage,DemoPage,Home2Page,
     TabsPage
   ],
   imports: [
@@ -24,7 +25,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     MyApp,
     AboutPage,
     ContactPage,
-    HomePage,DemoPage,
+    HomePage,DemoPage,Home2Page,
     TabsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
